@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="teName">OTP</label>
+        <input type="number" max="999999" class="form-control" id="teName" placeholder="Enter Name" #otp>
+      </div>
+      <button type="submit" class="btn btn-block" (click)="verifyOTP(otp.value)">Verify OTP</button>
+    </div>
+  </div>
+</div>

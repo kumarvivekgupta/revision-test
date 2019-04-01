@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row pt-5">
+      <div class="col-12">
+        <h1>The Engineers Enquiry Module</h1>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="teName">Name</label>
+          <input type="text" class="form-control" id="teName" placeholder="Enter Name" [(ngModel)]="enquiry.name" >
+        </div>
+        <div class="form-group">
+          <label for="tel">Phone</label>
+          <input type="tel" [(ngModel)]="enquiry.phone" class="form-control" id="tel" placeholder="Phone" #p>
+        </div>
+        <div class="form-group">
+          <label for="C1">Course</label>
+          <select [(ngModel)]="enquiry.courseid" class="form-control" id="C1" #b>
+            <option [value]="course.courseId" *ngFor="let course of core.Courses | async">{{course.name}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="C2">Branch</label>
+          <select class="form-control" [(ngModel)]="enquiry.branchid" id="C2" #c>
+            <option [value]="branch.id" *ngFor="let branch of core.Branches | async">{{branch.name}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="teYear">Passout Year</label>
+          <input [(ngModel)]="enquiry.passoutYear" type="number" class="form-control" id="teYear" placeholder="Enter Year" #y>
+        </div>
+        <div class="form-group">
+          <label for="C4">Have Done Other Coaching in Past</label>
+          <select [(ngModel)]="enquiry.haveDoneCoachingInPast" class="form-control" id="C4" #o>
+            <option [value]="false">No</option>
+            <option [value]="true">Yes</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block " (click)='eq()'>Submit</button>
+  
+      </div>
+    </div>
+  </div>
+  

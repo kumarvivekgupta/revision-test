@@ -1,0 +1,18 @@
+@import "../../../../style/ssh/variables";
+
+.header-button{
+  padding-left: 55%;
+  button{
+    background: $primary-color;
+    color: white;
+    padding: 2px;
+    margin-left: 2rem;
+    cursor: pointer;
+  }
+}
+
+
+
+.full-width-table {
+  width: 100%;
+}

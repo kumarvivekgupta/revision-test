@@ -1,0 +1,5 @@
+<div class="container">
+  <div class="display-4 mb-0">Edit</div>
+  <app-student [studentData]="student" *ngIf="student"></app-student>
+  <button type="submit" class="btn btn-primary btn-block " (click)="update()">Update</button>
+</div>

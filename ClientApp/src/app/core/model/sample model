@@ -1,0 +1,275 @@
+export class DemoClassForm {
+   public id: number;
+   public created: Date;
+   public expiry: Date;
+   public name: string;
+   public phone: number;
+   public branch: string;
+   public course: string;
+   public oTP: number;
+   public retryOTP: number;
+}
+
+{
+   "title": "Student Demos",
+   "entity": "demoClass",
+   "api": {
+     "url": "/api/demoClass"
+   },
+   "filter": [
+     "name",
+     "phone",
+     "branch",
+     "course"
+   ],
+   "fields": [
+     {
+       "name": "id",
+       "label": "Id",
+       "isId": true,
+       "readonly": true,
+       "type": "number"
+     },
+     {
+       "name": "created",
+       "type": "Date",
+       "label": "Created On"
+     },
+     {
+       "name": "expiry",
+       "type": "Date",
+       "label": "Expire"
+     },
+     {
+       "name": "phone",
+       "type": "number",
+       "label": "City"
+     },
+     {
+       "name": "branch",
+       "type": "string",
+       "label": "Branch"
+     },
+     {
+       "name": "course",
+       "type": "string",
+       "label": "Course"
+     },
+     {
+       "name": "otp",
+       "type": "number",
+       "label": "OTP"
+     },
+     {
+       "name": "retryOTP",
+       "type": "number",
+       "control": "number",
+       "label": "OTP Count"
+     }
+   ]
+}
+
+export class DemoClassAttendance {
+   public id: number;
+   public demoClass: DemoClassForm;
+   public entryTime: Date;
+}
+
+{
+   "title": "Demo Attendance",
+   "entity": "demoClass",
+   "api": {
+     "url": "/api/demoClass/attendance"
+   },
+   "filter": [
+     "name",
+     "phone",
+     "branch",
+     "course"
+   ],
+   "fields": [
+     {
+       "name": "id",
+       "label": "Id",
+       "isId": true,
+       "readonly": true,
+       "type": "number"
+     },
+     {
+       "name": "demoClass",
+       "type": "DemoClassForm",
+       "label": "demoC"
+     },
+     {
+       "name": "entryTime",
+       "type": "Date",
+       "label": "Created at"
+     }
+   ]
+}
+
+export class StudentEnrollment implements IPhone {
+   public enrollmentId: number;
+   public studentName: string;
+   public branch: string;
+   public admissionSource: string;
+   public email: string;
+   public phone: number;
+   public isWhatsapp: boolean;
+   public phone2: number;
+   public isWhatsapp2: boolean;
+   public passoutYear: number;
+   public haveDoneCoachingInPast: boolean;
+   public pastCoaching: string;
+   public created: Date;
+}
+
+{
+   "title": "Student Enroll",
+   "entity": "studentEnroll",
+   "api": {
+     "url": "/api/studentEnroll"
+   },
+   "filter": [
+     "studentName",
+     "branch",
+     "phone",
+     "passoutYear",
+     "isWhatsapp"
+   ],
+   "fields": [
+     {
+       "name": "enrollmentId",
+       "label": "eId",
+       "isId": true,
+       "readonly": true,
+       "type": "number"
+     },
+     {
+       "name": "branch",
+       "type": "string",
+       "label": "Branch"
+     },
+     {
+       "name":"admissionSource",
+       "type":"string",
+       "label":"Source"
+     }
+     {
+       "name": "phone",
+       "type": "number",
+       "label": "City"
+     },
+     {
+       "name": "isWhatsapp",
+       "type": "boolean",
+       "label":"WhatsApp"
+     }
+     {
+       "name": "email",
+       "type": "string",
+       "label": "Email"
+     },
+     {
+       "name": "phone2",
+       "type": "number",
+       "label": "City"
+     },
+     {
+       "name": "isWhatsapp2",
+       "type": "boolean",
+       "label":"WhatsApp2"
+     },
+     {
+       "name": "passoutYear",
+       "type": "number",
+       "label":"Year"
+     },
+     {
+       "name": "haveDoneCoachingInPast",
+       "type": "boolean",
+       "label":"pastCoaching"
+     },
+     {
+       "name": "pastCoaching",
+       "type": "string",
+       "label":"NameCoaching"
+     },
+     {
+       "name": "created",
+       "type": "Date",
+       "label": "Created On"
+     }
+   ]
+}
+
+
+export class CourseEnquiry implements IPhone {
+   public name: string;
+   public phone: number;
+   public branch: string;
+   public passoutYear: number;
+   public haveDoneCoachingInPast: boolean;
+   public pastCoaching: string;
+   public course: Course;
+   public demoScheduled: Date;
+   public created: Date;
+}
+
+{
+   "title": "Course Enquiry",
+   "entity": "courseEnquiry",
+   "api": {
+     "url": "/api/courseEnquiry"
+   },
+   "filter": [
+     "name",
+     "branch",
+     "phone",
+     "passoutYear",
+     "course"
+   ],
+   "fields": [
+     {
+       "name": "branch",
+       "type": "string",
+       "label": "Branch"
+     },
+     {
+       "name": "phone",
+       "type": "number",
+       "label": "City"
+     },
+     {
+       "name": "passoutYear",
+       "type": "number",
+       "label":"Year"
+     },
+     {
+       "name": "haveDoneCoachingInPast",
+       "type": "boolean",
+       "label":"pastCoaching"
+     },
+     {
+       "name": "pastCoaching",
+       "type": "string",
+       "label":"NameCoaching"
+     },
+     {
+       "name": "created",
+       "type": "Date",
+       "label": "Created On"
+     },
+     {
+       "name": "course",
+       "type": "string",
+       "label": "Course"
+     },
+     {
+       "name": "demoCreated",
+       "type": "Date",
+       "label": "Created On"
+     }
+   ]
+}
+

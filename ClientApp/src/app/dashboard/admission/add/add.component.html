@@ -1,0 +1,5 @@
+<div class="container">
+  <div class="display-4 mb-0">{{title||'Add'}}</div>
+  <app-student [studentData]="admission" *ngIf="admission"></app-student>
+  <button type="submit" class="btn btn-primary btn-block " (click)="create()">Submit</button>
+</div>

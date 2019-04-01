@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" routerLink="/">Team</a>
+    <div class="navbar-nav nav-justified mr-auto">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/','enquiry']">Enquiry</a>
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/','demo']">Demo</a>
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/','admission']">Admission</a>
+    </div>
+    <span *ngIf="!name" class="navbar-text">
+      Guest
+      <button class="btn btn-light" (click)="login()">
+        Login
+      </button>
+    </span>
+    <span *ngIf="name" class="navbar-text">
+      {{name}}
+      <button class="btn btn-light" (click)="logoff()">
+        Logout
+      </button>
+    </span>
+
+</nav>
+<router-outlet ></router-outlet>
