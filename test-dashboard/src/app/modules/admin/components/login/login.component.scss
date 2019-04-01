@@ -1,0 +1,57 @@
+@import "../../../../../sass/flex-mixins/flex-styles";
+@import "../../../../../sass/abstracts/variables";
+
+.login-page{
+  @include pl-fx-layout(column);
+  @include pl-fx-layout-alignment(center, center);
+  height: 100vh;
+  margin: auto;
+  background: url("../../../../../assets/fog-1535201_1920.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-primary-light;
+  background-blend-mode: soft-light;
+}
+.login-container{
+  @include pl-fx-layout(column);
+  @include pl-fx-layout-alignment(center, center);
+  width: 100%;
+  max-width: 500px;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+.login-header{
+  @include pl-fx-layout(column);
+  @include pl-fx-layout-alignment(center, center);
+  width: 100%;
+  background: $color-primary;
+  color: $color-white;
+  padding: 3rem;
+  box-sizing: border-box;
+  border-radius: 4px 4px 0 0;
+}
+.login-header__tittle{
+  font-size: 3rem;
+  font-family: inherit;
+  font-weight: bold;
+}
+.login-content{
+  @include pl-fx-layout(column);
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+
+}
+.login-form{
+  @include pl-fx-layout(column);
+  padding: 3rem;
+}
+.login-button{
+  background: $color-primary;
+  color: $color-white;
+  margin-top: 1rem;
+  flex-shrink: 0;
+  align-self: center;
+  min-width: 15rem;
+}

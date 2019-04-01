@@ -1,0 +1,16 @@
+<div class="question-list-container">
+<yot-question *ngFor="let question of filteredQuestions; let i = index" [question]="question" (questionModified)="onQuestionModified($event)">
+  <div class="question-serial-no">
+    <H3>Question No {{indexOfQuestion(question)}}</H3>
+    <span class="empty-span"></span>
+    <button mat-button class="question-bookmark__button" (click)="deleteResponse(question)">
+      <mat-icon class="question-bookmark__icon" matTooltip="Clear Response">clear</mat-icon>
+    </button>
+    <button mat-button class="question-bookmark__button" (click)="onQuestionModified({id: question.id, type: QuestionFiltersEnum.SAVED})">
+      <mat-icon class="question-bookmark__icon" [ngStyle]="{'color': isSaved(question.id) ? 'yellow': 'gray'}"
+                matTooltip="Save Question">bookmark</mat-icon>
+    </button>
+  </div>
+</yot-question>
+</div>
+

@@ -1,0 +1,19 @@
+@import "../../../../../../../sass/flex-mixins/flex-styles";
+@import "../../../../../../../sass/abstracts/mixins";
+@import "../../../../../../../sass/abstracts/variables";
+
+.test-list-header {
+  background-color: $color-grey-dark-2;
+  padding: 10px;
+}
+
+.test-list-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  overflow: scroll;
+}
+
+.empty-span {
+  flex: 1 1 auto
+}

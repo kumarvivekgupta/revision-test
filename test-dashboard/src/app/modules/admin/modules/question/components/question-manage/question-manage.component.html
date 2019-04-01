@@ -1,0 +1,31 @@
+<mat-card>
+  <h1>{{question ? 'Edit Question' : 'Create Question'}}</h1>
+  <form class="question-manage-form">
+    <mat-form-field floatLabel="never">
+      <input [formControl]="controls.question" placeholder="Enter question" matInput>
+    </mat-form-field>
+    <yot-image-manage [diagramFC]="controls.diagram"></yot-image-manage>
+    <div class="divider"></div>
+    <div class="options-heading-row">
+      <h3>Options</h3>
+      <button mat-raised-button (click)="addOption()" type="button" color="accent">Add Option</button>
+    </div>
+    <yot-option-manage [optionsArray]="controls.options">
+    </yot-option-manage>
+    <div *ngIf="controls.options?.controls.length > 0" class="correct-option-container">
+      <h3>Correct Option</h3>
+      <mat-radio-group [formControl]="controls.correct_option">
+        <mat-radio-button *ngFor="let option of controls.options.controls; let i = index" [value]="i + 1"
+                          [checked]="controls.correct_option === i + 1">{{i + 1}}</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div>
+      <button class="question-modify__action" mat-raised-button type="button" color="warn" (click)="close()">Cancel
+      </button>
+      <button class="question-modify__action" mat-raised-button type="submit" [disabled]="form?.invalid"
+              color="primary" (click)="emitQuestion()">{{question ? 'Update' : 'Save'}}</button>
+    </div>
+  </form>
+</mat-card>
+
+

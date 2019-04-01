@@ -1,0 +1,24 @@
+@import "../../../../../sass/flex-mixins/flex-styles";
+@import "../../../../../sass/abstracts/variables";
+
+.image-manage {
+  @include pl-fx-layout-with-gap(row, 10px);
+  @include pl-fx-layout-alignment(flex-start, center);
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}
+.add-btn {
+  background: limegreen;
+  color: white;
+  font-weight: bold;
+  line-height: 20px;
+  width: 24px;
+  height: 24px;
+
+  mat-icon {
+    font-size: 18px;
+  }
+}

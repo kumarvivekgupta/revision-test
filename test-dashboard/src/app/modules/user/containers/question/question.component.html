@@ -1,0 +1,16 @@
+<div class="question-container">
+  <ng-content></ng-content>
+  <div class="question-description">
+    {{question.question}}
+  </div>
+  <div *ngIf="question.diagram" class="question-image">
+    <img [src]="question.diagram" alt="diagram">
+  </div>
+  <div class="question-option">
+  <yot-option [optionData]="question.options" [selectedOptionId]="question.selected_option" (option)="answered($event)"
+              [showSpinner]="isSpinnerLoading">
+  </yot-option>
+  </div>
+</div>
+
+

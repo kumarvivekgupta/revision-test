@@ -1,0 +1,13 @@
+<mat-toolbar>
+  <mat-toolbar-row class="toolbar">
+    <div>Yo-Test</div>
+    <span class="empty-span"></span>
+    <button class="mat-button-custom" mat-button [matMenuTriggerFor]="settings">Username
+      <mat-icon class="icon-custom">keyboard_arrow_down</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-menu [overlapTrigger]="false" #settings="matMenu">
+  <button mat-menu-item>Account</button>
+  <button mat-menu-item routerLink="/login">Logout</button>
+</mat-menu>

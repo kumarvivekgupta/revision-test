@@ -1,0 +1,19 @@
+@import "../../../../../../../sass/flex-mixins/flex-styles";
+@import "../../../../../../../sass/abstracts/variables";
+
+.option-container {
+  flex-basis: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px #696969 solid;
+  margin: 1rem 0;
+  @include pl-fx-layout(column);
+}
+.option-diagram {
+  width: 80px;
+  height: 80px;
+}
+.option-cell {
+  @include pl-fx-layout-with-gap(row, 10px);
+  @include pl-fx-layout-alignment(flex-start, center);
+}

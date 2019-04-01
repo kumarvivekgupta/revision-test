@@ -1,0 +1,16 @@
+<div class="option-container">
+  <mat-radio-group class="option-radio-group" (change)="optionSelect($event)">
+    <mat-radio-button class="option-radio-button" *ngFor="let option of options ,let i=index" [value]="option"  [checked]="check(option)">
+      {{option[i+1].title}}
+      <div class="option-image">
+        <img *ngIf="option.diagram" [src]="option.diagram" alt="diagram">
+      </div>
+    </mat-radio-button>
+  </mat-radio-group>
+</div>
+<mat-spinner
+  *ngIf="showSpinner"
+  class="spinner"
+  color="accent"
+  value="20">
+</mat-spinner>

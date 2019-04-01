@@ -1,0 +1,10 @@
+<div *ngFor="let optionFG of optionsArray?.controls; let i = index" class="option-cell">
+  <div class="option-container">
+    <mat-form-field floatLabel="never">
+      <input [formControl]="optionFG.get('title')" placeholder="Enter option" matInput>
+    </mat-form-field>
+    <yot-image-manage [diagramFC]="optionFG.get('diagram')"></yot-image-manage>
+  </div>
+  <button mat-icon-button (click)="removeOption(i)" type="button" [disabled]="optionsArray.controls.length <= 1">
+    <mat-icon>delete</mat-icon></button>
+</div>

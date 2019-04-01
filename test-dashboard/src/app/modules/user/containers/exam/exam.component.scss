@@ -1,0 +1,75 @@
+@import "../../../../../sass/flex-mixins/flex-styles";
+@import "../../../../../sass/abstracts/mixins";
+@import "../../../../../sass/abstracts/variables";
+
+.exam-page{
+  @include pl-fx-layout(column);
+  height: 100vh;
+  @include respond(tab-port){
+    margin: 1rem;
+    height: 98vh;
+  }
+}
+.exam-container{
+  @include pl-fx-layout(column);
+  height: 100%;
+  padding: 0;
+  overflow: auto;
+}
+.exam-header{
+  @include pl-fx-layout(row);
+  @include pl-fx-layout-alignment(space-between, center);
+  background: $color-primary-light;
+  padding: 1rem;
+  flex-shrink: 0;
+  box-sizing: border-box;
+
+  @include respond(tab-port){
+    @include pl-fx-layout(row);
+  }
+
+}
+.exam-header__filter{
+  @include pl-fx-layout(row);
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+
+  @include respond(tab-port){
+    margin-top: 0;
+  }
+}
+mat-select {
+  min-width: 7rem;
+  background-color: $color-primary;
+  padding: 10px;
+  border-radius: 10px;
+}
+.exam-header__tittle{
+  @include pl-fx-layout(column);
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.exam-header__label{
+  margin-right: 1rem;
+}
+.exam-Header__button{
+  background: $color-primary;
+  color: white;
+  min-width: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.exam-content{
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: column;
+  overflow: auto;
+  box-sizing: border-box;
+}
+.empty-span {
+  flex: 1 1 auto
+}

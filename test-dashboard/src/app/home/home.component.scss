@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+@import "../../sass/flex-mixins/flex-styles";
+@import "../../sass/abstracts/variables";
+@import "../../sass/abstracts/mixins";
+
+.container{
+  font-family: 'Lato', sans-serif;
+  min-height: 100vh;
+  @include pl-fx-layout(column);
+  @include pl-fx-layout-alignment(center, center);
+  margin: auto;
+  background: url("../../assets/home-office-336373_1920.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-grey-light-1;
+  background-blend-mode: overlay;
+
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include respond(tab-port){
+      transform: translateY(-120px);
+    }
+
+    .form-field {
+      max-width: 480px;
+      color: black;
+
+    }
+
+    h1 {
+      font-weight: 100;
+      word-spacing: .5rem;
+      letter-spacing: 2px;
+      text-align: center;
+      padding: 0 2rem;
+      text-transform: uppercase;
+    }
+
+    .login-button {
+      margin:20px;
+      padding: 5px 80px;
+      background: $color-primary;
+      color: $color-white;
+      text-transform: uppercase;
+      border-radius: 50px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "../../../../../../../sass/flex-mixins/flex-styles";
+@import "../../../../../../../sass/abstracts/variables";
+
+mat-card {
+  margin: 2%;
+  padding: 2%;
+  height: 90%;
+  overflow: scroll;
+}
+.question-manage-form {
+  @include pl-fx-layout(column);
+}
+.question-title {
+  @include pl-fx-layout(row, 5px);
+}
+.question-diagram {
+  width: 80px;
+  height: 80px;
+}
+.options-heading-row {
+  @include pl-fx-layout-with-gap(row, 20px);
+  @include pl-fx-layout-alignment(flex-start, center);
+}
+.divider {
+  height: 1px;
+  width: 100%;
+  margin: 2rem 0 1rem 0;
+  background: #aaa;
+}
+yot-option-manage {
+  margin: 1rem 0;
+}
+.question-modify__action {
+  float: right;
+  margin: 2rem 1rem;
+}
+.correct-option-container {
+  @include pl-fx-layout-with-gap(column, 20px);
+  @include pl-fx-layout-alignment(flex-start, flex-start);
+
+  .mat-radio-group {
+    @include pl-fx-layout-with-gap(column, 15px);
+    @include pl-fx-layout-alignment(flex-start, flex-start);
+  }
+}

@@ -1,0 +1,16 @@
+@import "../../../../../sass/flex-mixins/flex-styles";
+@import "../../../../../sass/abstracts/variables";
+
+.test-actions {
+  @include pl-fx-layout(row);
+  @include pl-fx-layout-alignment(space-around, center);
+  margin-top: 20px;
+  button{
+    background-color: #673ab7;
+  }
+
+}
+.test-list-header {
+  margin-top: 15px;
+  padding: 10px;
+}

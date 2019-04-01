@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="content">
+    <h1>Welcome to DevsLane Test</h1>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Test Id" [formControl]="url">
+      <mat-error>Test Id is required</mat-error>
+    </mat-form-field>
+    <mat-error *ngIf="error">{{error}}</mat-error>
+    <button class="login-button" mat-raised-button (click)="onSubmit()" [disabled]="url.invalid && url.touched">
+      Go
+    </button>
+  </div>
+</div>

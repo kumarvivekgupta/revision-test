@@ -1,0 +1,12 @@
+<button *ngIf="!diagramFC.value" mat-raised-button matTooltip="Add Image" (click)="changeImage()" type="button" color="primary">
+  Add Image
+</button>
+<div *ngIf="diagramFC.value" class="image-manage">
+  <img [src]="diagramFC.value" alt="Diagram">
+  <button mat-icon-button matTooltip="Change Image" type="button" color="accent" (click)="changeImage()">
+    <mat-icon>cached</mat-icon>
+  </button>
+  <button mat-icon-button matTooltip="Remove Image" type="button" (click)="removeImage()">
+    <mat-icon>clear</mat-icon>
+  </button>
+</div>

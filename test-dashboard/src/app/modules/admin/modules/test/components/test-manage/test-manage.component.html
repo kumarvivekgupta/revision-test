@@ -1,0 +1,13 @@
+<div class="test-manage-container">
+  <mat-tab-group style="width: 100%" [dynamicHeight]="true" [(selectedIndex)]="index">
+    <mat-tab label="Test Details">
+      <yot-test-details [test]="test" (testCreated)="testCreated($event)"></yot-test-details>
+    </mat-tab>
+    <mat-tab label="Questions Set" [disabled]="!test">
+      <yot-question-set></yot-question-set>
+    </mat-tab>
+    <mat-tab label="Demo Title" [disabled]="!questionSet">
+      <yot-test-details></yot-test-details>
+    </mat-tab>
+  </mat-tab-group>
+</div>

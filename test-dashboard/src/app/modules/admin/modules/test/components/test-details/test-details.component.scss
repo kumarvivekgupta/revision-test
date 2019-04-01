@@ -1,0 +1,39 @@
+@import "../../../../../../../sass/flex-mixins/flex-styles";
+@import "../../../../../../../sass/abstracts/variables";
+
+mat-card {
+  margin: 2rem;
+}
+form {
+  @include pl-fx-layout-with-gap(column, 10px);
+}
+form > mat-form-field {
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  height: 3rem;
+}
+.instruction-heading {
+  @include pl-fx-layout-with-gap(row, 15px);
+  @include pl-fx-layout-alignment(flex-start, center);
+}
+.instruction-cell {
+  @include pl-fx-layout-with-gap(row, 15px);
+
+  mat-form-field {
+    width: 100%;
+  }
+}
+.add-btn {
+  background: limegreen;
+  color: white;
+  font-weight: bold;
+  line-height: 20px;
+  width: 24px;
+  height: 24px;
+
+  mat-icon {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="content">
+    <div class="title">
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>
+            <h1>{{test.title}}</h1>
+          </mat-card-title>
+          <mat-card-subtitle>
+            <h3>{{test.description}}</h3>
+          </mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+    <div class="instructions">
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>
+            <h1>Online Test Instructions</h1>
+          </mat-card-title>
+          <mat-card-subtitle>
+            <ul>
+              <li><h3>The duration of the test is {{test.duration}} minutes</h3></li>
+              <li *ngFor="let instruction of test.instructions"><h3>{{instruction}}</h3></li>
+            </ul>
+          </mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+    <div class="grey-bg">
+      <button class="login-button" mat-raised-button (click)="startExam()">Start Your Exam</button>
+    </div>
+  </div>
+</div>

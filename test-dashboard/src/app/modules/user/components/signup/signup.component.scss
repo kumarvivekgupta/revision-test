@@ -1,0 +1,79 @@
+@import "../../../../../sass/flex-mixins/flex-styles";
+@import "../../../../../sass/abstracts/variables";
+@import "../../../../../sass/abstracts/mixins";
+
+.signup-page{
+  @include pl-fx-layout(column);
+  @include pl-fx-layout-alignment(center, center);
+  height: 100vh;
+  margin: auto;
+  background: url("../../../../../assets/fog-1535201_1920.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-primary-light;
+  background-blend-mode: soft-light;
+}
+.signup-container{
+  @include pl-fx-layout(column);
+  @include pl-fx-layout-alignment(flex-start, center);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+  flex-grow: 1;
+  @include respond(tab-port){
+    height: auto;
+    @include pl-fx-layout-alignment(center, center);
+    flex-grow: 0;
+    max-width: 500px;
+  }
+}
+.signup-header{
+  @include pl-fx-layout(column);
+  @include pl-fx-layout-alignment(center, center);
+  width: 100%;
+  background: $color-primary;
+  color: $color-white;
+  padding: 3rem;
+  box-sizing: border-box;
+  @include respond(tab-port){
+    border-radius: 4px 4px 0 0;
+  }
+}
+.signup-header__tittle{
+  font-size: 3rem;
+  font-family: inherit;
+  font-weight: bold;
+}
+.signup-content{
+  @include pl-fx-layout(column);
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+  flex-grow: 1;
+
+  @include respond(tab-port){
+    flex-grow: 0;
+  }
+}
+.signup-form{
+  @include pl-fx-layout(column);
+  padding: 3rem;
+  flex-grow: 1;
+
+  @include respond(tab-port){
+    flex-grow: 0;
+  }
+}
+.signup-button{
+  background: $color-primary;
+  color: $color-white;
+  margin-top: 1rem;
+  flex-shrink: 0;
+  align-self: center;
+  min-width: 15rem;
+  border-radius: 50px;
+}
+.empty-span{
+  flex: 1 1 auto;
+}

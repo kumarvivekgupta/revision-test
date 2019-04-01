@@ -1,0 +1,4 @@
+<div class="test-list-content" style="height: 90vh; overflow: scroll">
+  <yot-test *ngFor="let test of testArr" [test]="test" (deleteClicked)="deleteTest($event)" (editClicked)="editTest($event)"></yot-test>
+  <!--<button (click)="open()">Add</button>-->
+</div>

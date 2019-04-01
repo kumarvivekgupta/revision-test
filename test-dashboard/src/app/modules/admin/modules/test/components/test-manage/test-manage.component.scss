@@ -1,0 +1,11 @@
+@import "../../../../../../../sass/flex-mixins/flex-styles";
+@import "../../../../../../../sass/abstracts/variables";
+
+::ng-deep .mat-tab-list {
+  background: #ddd !important;
+}
+.test-manage-container {
+  min-height: 100vh;
+  @include pl-fx-layout(column);
+  @include pl-fx-layout-alignment(flex-start, center);
+}

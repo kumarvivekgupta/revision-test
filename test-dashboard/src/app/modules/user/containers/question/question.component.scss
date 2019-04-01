@@ -1,0 +1,35 @@
+@import "../../../../../sass/abstracts/mixins";
+
+.question-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.07);
+  padding: 1rem 2rem;
+}
+.question-description{
+  display: flex;
+  padding-bottom: 20px;
+}
+.question-option{
+  display: flex;
+}
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.question-image{
+  display: flex;
+  padding: 1rem;
+  flex-wrap: wrap;
+  min-width: 0;
+
+  img {
+    width: 40vh;
+    height: 40vh;
+    object-fit: scale-down;
+  }
+}

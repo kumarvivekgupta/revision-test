@@ -1,0 +1,20 @@
+<div class="exam-page">
+  <mat-card class="exam-container">
+    <div class="exam-header">
+      <h3 class="exam-header__tittle">
+        Mental Ability test
+      </h3>
+      <yot-counter [timeLeft]="service.test?.duration * 60"></yot-counter>
+      <div class="exam-header__filter">
+        <p class="exam-header__label">Filter:</p>
+        <mat-select [value]="selectedFilter" (selectionChange)="selectedFilter = $event.value">
+          <mat-option [value]="filter.value" *ngFor="let filter of filters">{{filter.title}}</mat-option>
+        </mat-select>
+      </div>
+      <button mat-raised-button color="warn" matTooltip="Submit the test" (click)="submitTest()">Submit</button>
+    </div>
+    <mat-card-content class="exam-content">
+      <yot-question-list [filter]="selectedFilter"></yot-question-list>
+    </mat-card-content>
+  </mat-card>
+</div>

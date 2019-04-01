@@ -1,0 +1,55 @@
+@import "../../../../../../../sass/flex-mixins/flex-styles";
+@import "../../../../../../../sass/abstracts/variables";
+
+mat-card {
+  padding: 5px;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+
+  line-height: 25px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  @include pl-fx-layout(row);
+  @include pl-fx-layout-alignment(center, center);
+}
+
+.test-actions-container {
+  @include pl-fx-layout-with-gap(column, 30px);
+  @include pl-fx-layout-alignment(center, stretch);
+}
+
+.test-actions {
+  @include pl-fx-layout(row);
+  @include pl-fx-layout-alignment(space-around, center);
+}
+
+.hover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.82);
+}
+
+.test-hover {
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.mat-card:hover .test-hover {
+  opacity: 1;
+}
+
+.test-hover mat-icon {
+  width: 40px ;
+  height: 35px ;
+  font-size: 40px !important;
+  background: rgba(20, 20, 20, 0);
+  color: white;
+}

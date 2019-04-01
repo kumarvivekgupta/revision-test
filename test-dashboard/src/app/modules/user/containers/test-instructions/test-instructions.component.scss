@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+@import "../../../../../sass/flex-mixins/flex-styles";
+@import "../../../../../sass/abstracts/variables";
+@import "../../../../../sass/abstracts/mixins";
+
+
+.container {
+  min-height: 100vh;
+  font-family: 'Lato', sans-serif;
+  overflow: auto;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    .title {
+      @include respond(tab-port) {
+        padding: 10px 20px 10px 20px;
+      }
+    }
+    .instructions{
+
+      @include respond(tab-port){
+        padding: 20px;
+      }
+    }
+    .grey-bg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+      background: $color-primary-light;
+      flex-grow: 1;
+
+      .login-button {
+        border-radius: 50px;
+        padding: 5px 80px;
+        background: $color-primary;
+        color: $color-white;
+        text-transform: uppercase;
+      }
+    }
+    .card {
+      border-radius: 0;
+      @include respond(tab-port) {
+        border-radius: 4px;
+      }
+    }
+    @media (max-width: 37.5rem) {
+      ul{
+        padding-left: 1.2rem;
+      }
+    }
+  }
+}
